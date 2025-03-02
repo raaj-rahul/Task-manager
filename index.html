@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+        </header>
+        <main>
+            <section class="task-input">
+                <input type="text" id="new-task" placeholder="New task">
+                <input type="date" id="task-date" placeholder="Date">
+                <input type="text" id="task-author" placeholder="Author">
+                <input type="text" id="task-role" placeholder="Role">
+                <input type="text" id="task-responsible" placeholder="Responsible">
+                <input type="text" id="task-status" placeholder="Status">
+                <button onclick="addTask()">Add Task</button>
+            </section>
+            <section class="task-list-container">
+                <h2>Task List</h2>
+                <ul id="task-list" class="task-list"></ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Task Manager. All rights reserved.</p>
+        </footer>
+    <section class="task-summary">
+        <h2>Task Summary</h2>
+        <div class="summary-item">
+            <span>Total Tasks:</span>
+            <span id="total-tasks">0</span>
+        </div>
+        <div class="summary-item">
+            <span>Completed Tasks:</span>
+            <span id="completed-tasks">0</span>
+        </div>
+        <div class="summary-item">
+            <span>Pending Tasks:</span>
+            <span id="pending-tasks">0</span>
+        </div>
+    </section>
+    <section class="task-filter">
+        <h2>Filter Tasks</h2>
+        <input type="text" id="filter-author" placeholder="Filter by Author">
+        <input type="text" id="filter-status" placeholder="Filter by Status">
+        <button onclick="filterTasks()">Filter</button>
+    </section>
+    </body>
+</html>
